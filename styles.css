@@ -1,11 +1,14 @@
 *{
     margin: 0;
-    border: solid 2px red;
+
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
-    background-image: url(/imagenes/image\ tornasol1.png);
+   /* background-image: url(https://68.media.tumblr.com/9c482ecfcda309f629ac69168f2c22c2/tumblr_oh44bi2bp91vj2gx4o1_500.gif);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;*/
     
    
 }
@@ -19,12 +22,15 @@ body::-webkit-scrollbar-thumb{
 /*////////////////////////////////////////////////////////*/ 
 /*////////////////////////////////////////////////////////*/ 
 .header{
-  
+    
     width: 100%;
     height: 160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url(https://68.media.tumblr.com/9c482ecfcda309f629ac69168f2c22c2/tumblr_oh44bi2bp91vj2gx4o1_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .book-logo img{
     width: 170px;
@@ -33,14 +39,21 @@ body::-webkit-scrollbar-thumb{
     transform: rotate(-23deg);
     margin-top: 5px;
     margin-left: 5px;
-
+   
 }
-nav ul {
+.book-logo img { /*animacion del logo con animate.css*/
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 5s; /* don't forget to set a duration! */
+  }
+/*nav ul {
     display: flex;
     justify-content: left;
     align-items: center;
     list-style-type: none;
-    margin: 700px;
+    margin: 600px;
     padding: 0;
 }
 
@@ -53,34 +66,137 @@ nav li a {
 
 nav li a:hover {
     background-color: #555;
-}
+}*/
+/* Estilos para la barra de navegación */
+nav {
+    width: 580px;
+    overflow: hidden;
+    margin: 600px;
+
+   }
+
+   /* Estilos para los elementos de la lista */
+   nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px;
+   
+    
+   }
+   
+   nav li {
+    float: left;
+   }
+   
+   /* Estilos para los enlaces de la lista */
+   nav li a {
+    display: block;
+    color: rgb(0, 218, 207);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+   
+   /* Estilos para el hover de los enlaces */
+   nav li a:hover {
+    background-color: #ce68afef;
+   }
+   
+   /* Estilos para el despliegue del menú vertical */
+   nav li:hover ul {
+    display: block;
+   }
+   
+   nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #e026c8e3;
+   }
+   
+   nav ul ul li {
+    float: none;
+   }
+   
+   nav ul ul li a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+   
+   nav ul ul li a:hover {
+    background-color: #75f12da2;
+   }
 
 /*////////////////////////////////////////////////////////*/ 
 /*////////////////////////////////////////////////////////*/ 
 
 .main{
-    background-color: palevioletred;
+    /*background-color: palevioletred;*/
     width: 100%;
     height: calc(100vh - 160px); /*aqui puede variar el tamaña, ver al final sino cambia*/
-    display:block;
+    display:flex;
     justify-content: center;
     align-items: center;
+    background-image: url(https://68.media.tumblr.com/9c482ecfcda309f629ac69168f2c22c2/tumblr_oh44bi2bp91vj2gx4o1_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*////////////////////////////////////////////////////////*/ /*////////////////////////////////////////////////////////*/ 
 .section{
-    background-color: blue;
+    background-image:url(https://68.media.tumblr.com/9c482ecfcda309f629ac69168f2c22c2/tumblr_oh44bi2bp91vj2gx4o1_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 70%;
     height: 100%;
+    display: flex;
+}
+.section img{
+    max-width: 65%;
+    padding: 25px 25px 25px 25px;
+    outline: 2px solid rgb(219, 42, 175);
+    outline-offset: -30px;
+    display: block;
+    transition: 0.5s;
+    object-fit: cover;
+
   
+}
+.section img:hover{
+    transform: scale(1.2);
+
+}
+.section img {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+
+.galery {
+    columns: 6 200px;
+    margin: 5px 5px 5px 5px;
+    /*background-color: aqua;*/
+    
     
 }
+/*//////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////seccion subs/////////////////////////////////////*/
+
+
 /*////////////////////////////////////////////////////////*/ 
 /*////////////////////////////////////////////////////////*/ 
 
 .aside{
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     width: 30%;
     height: 100%;
+    background-image: url(https://media0.giphy.com/media/TgVLgxDI57i9i5Qtr9/200.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
         
 }
 .box   {
@@ -89,11 +205,12 @@ nav li a:hover {
     flex-direction: column;
     margin-left: 50px;
     
+    
 }
 .box h2{
     font-size: 2.5em;
-    -webkit-text-stroke: 1px blue;
-    color: wheat;
+    -webkit-text-stroke: 1px rgb(0, 204, 255);
+    color: rgb(121, 102, 134);
     line-height: 2em;
     text-transform: uppercase;
     letter-spacing: 0.4em;
@@ -117,11 +234,232 @@ nav li a:hover {
       
 /*////////////////////////////////////////////////////////*/ 
 /*////////////////////////////////////////////////////////*/    
+.contenido{
+    background-image: url(https://i.pinimg.com/originals/06/f5/95/06f59560c184eff0cf6fcb423fd9ee9a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 55px ;
+    height: 2000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.boxy {
+    background-image: url(/imagenes/image\ tornasol1.png);
+    border-radius: 8px;
+    padding: 16px;
+    width: 400px;
+    float: left;
+    margin-right: 16px;
+}
+
+.boxy img {
+    width: 100%;
+    height: auto;
+}
+
+.boxy h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.boxy p {
+    margin-bottom: 8px;
+}
+
+
+.contenido h1{
+    font-family: 'Pixelify Sans', sans-serif;
+    color: red;
+}
+.contenido h1{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+
+.sub1{
+    background-image: url(https://media2.giphy.com/media/LmWnCBTOGUmw8/giphy.gif?cid=ecf05e47lcbba5nwnq7vfepfnykbkj65ihrsdd6cnwr6pksf&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sub1 h1{
+    color: bisque;
+    font-family: 'Pixelify Sans', sans-serif;
+    padding: 10px 10px;
+    font-size: 30px;
+}
+.sub1 p{
+    color: beige;
+    padding: 15px 15px 15px 15px;
+    font-size: 20px;
     
+}
+.cuadro, .cuadro2, .cuadro3, .cuadro4, .cuadro5, .cuadro6, .cuadro7, .cuadro8, .cuadro9, .cuadro10, .cuadro11, .cuadro12  {
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 30%;
+    margin: 15px 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    color: blanchedalmond;
+    align-items: center;
+}
+.cuadro img, .cuadro2 img, .cuadro3 img , .cuadro4 img, .cuadro5 img, .cuadro6 img, .cuadro7 img, .cuadro8 img , .cuadro9 img, .cuadro10 img, .cuadro11 img, .cuadro12 img  {
+    width: 160px;
+    height: 130px;
+    border-radius: 30px;
+}
+.cuadro p, .cuadro2 p, .cuadro3 p, .cuadro4 p, .cuadro5 p, .cuadro6 p, .cuadro7 p, .cuadro8 p, .cuadro9 p, .cuadro10 p, .cuadro11 p, .cuadro12 p {
+    font-size: 15px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+.cuadro h3, .cuadro2 h3, .cuadro3 h3, .cuadro4 h3, .cuadro5 h3, .cuadro6 h3, .cuadro7 h3, .cuadro8 h3, .cuadro9 h3, .cuadro10 h3 .cuadro11 h3, .cuadro12 h3 {
+color: aliceblue;
+font-size: 20px;
+text-align: center;
+
+
+}
+.cuadro {
+    background-image: url(https://media.newyorker.com/photos/59b3f875e899d754c57f4c35/master/w_2560%2Cc_limit/Rothman-IT.JPG);
+}
+.cuadro2 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHE4aNO5B7CoZvuMnHM-3giTMB1bV-AtvOiw&usqp=CAU);
+}
+.cuadro3 {
+    background-image: url(https://compote.slate.com/images/2ad37793-68b0-4407-b77d-54fd5a4bf035.jpeg?width=1200&rect=1560x1040&offset=0x0);
+}
+.cuadro4 {
+    background-image: url(https://i.blogs.es/6aa2bd/cosmos-carl-sagan-2/450_1000.jpg);
+}
+.cuadro5 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHSSJgUeuzDHesbMmzTNevc4timXhp2q0CnA&usqp=CAU);
+}
+.cuadro6 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUg97kTck1MocLA-MtLb2wU68qLTUFn8ShCQ&usqp=CAU);
+}
+.cuadro7 {
+    background-image: url(https://y.yarn.co/456e8785-e105-4b79-b273-4a09fc934661_thumb.jpg);
+}
+.cuadro8 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSGEp7WcbPp-gUm_HUroF_U2w_BGMbfZGuWA&usqp=CAU);
+}
+.cuadro9 {
+    background-image: url(https://images.milenio.com/Qak8suXW7TU8Rkekj4xUoLw8RMQ=/345x237/uploads/media/2018/06/25/eric-arthur-blair-conocido-george_0_0_900_560.jpg);
+}
+.cuadro10 {
+    background-image: url(https://darkregions.com/cdn/shop/products/Hannibal_cover2_2000x.jpg?v=1649370367);
+}
+.cuadro11 {
+    background-image: url(https://pm1.aminoapps.com/6390/2f2e4cb5dc7237ed9988d99f91b0df501ff1801e_00.jpg);
+}
+
+.cuadro12 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjXejkM3GpmHbWRbXrXUwvO5m74ar-EBz-4A&usqp=CAU);
+}
+
+/*////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////*/
+
+.sub2{
+    background-image: url(https://media1.giphy.com/media/3ov9k4xC1ijCwGiC5y/giphy.gif?cid=ecf05e47cht6c8g9tq1hc800dyma6s426i2fz6riluls2m7t&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    
+}
+.sub2 h1{
+    color: rgb(226, 11, 215);
+    padding: 10px;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.container1{
+    
+    display: flex;
+    height: 500px;
+    padding: 15px 15px 15px 15 px;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+.card {
+    width: 60px;
+    height: 400px;
+    position: relative;
+    margin: 50px 20px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+   padding-right: 500px;
+   
+   }
+.card p{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: black;
+
+}
+img{
+    width: 300px;
+    height: auto;
+}
+   .card:hover {
+    transform: rotateY(180deg);
+   }
+   
+   .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   }
+   
+   .card__face--front {
+    background-image: url(/imagenes/olografico\ verde.png);
+    color: #fff;
+   }
+   
+   .card__face--back {
+    background-image: url(/imagenes/algodon\ rosa.png);
+    background-size: cover;
+    color: #333;
+    transform: rotateY(180deg);
+   }
+
+/*////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////*/
+
+.sub3{
+    background-color: orange;
+    height: 500px;
+}
+.sub3 img {
+    width: 80px;
+    height: 80px;
+}
+
+
+
+
 
 .footer{
-    background-color: brown;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjlfhN4CKBArC7VSHZzD1zlWwQIXBxh8HFHQ&usqp=CAU);
     width: 100%;
-    height: 100px;
+    height: 240px;
 
 }
