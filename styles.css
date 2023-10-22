@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    border: solid 2px red;
+}
+body{
+    background-image: url(/imagenes/image\ tornasol1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+   
+}
+body::-webkit-scrollbar{
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(175, 91, 224);
+    border-radius: 5px ;
+}
+/*////////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////////*/ 
+.header{
+  
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-logo img{
+    width: 170px;
+    height: 150px;
+    border-image: none;
+    transform: rotate(-23deg);
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+nav ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style-type: none;
+    margin: 700px;
+    padding: 0;
+}
+
+nav li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #555;
+}
+
+/*////////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////////*/ 
+
+.main{
+    background-color: palevioletred;
+    width: 100%;
+    height: calc(100vh - 160px); /*aqui puede variar el tamaña, ver al final sino cambia*/
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+/*////////////////////////////////////////////////////////*/ /*////////////////////////////////////////////////////////*/ 
+.section{
+    background-color: blue;
+    width: 70%;
+    height: 100%;
+  
+    
+}
+/*////////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////////*/ 
+
+.aside{
+    background-color: blueviolet;
+    width: 30%;
+    height: 100%;
+        
+}
+.box   {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    
+}
+.box h2{
+    font-size: 2.5em;
+    -webkit-text-stroke: 1px blue;
+    color: wheat;
+    line-height: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    animation: animate 1.5s linear infinite;
+    animation-delay: calc(var(--i)*-0.25s);
+    transform: rotate(-20deg);
+    font-family: 'Pixelify Sans', sans-serif;
+}
+@keyframes animate{
+0%,10%
+{
+    color: rgb(84, 152, 230);
+    filter:hue-rotate(0.05deg);
+}
+10.000001%
+{
+    color: transparent;
+    filter: hue-rotate(720deg);
+}
+}
+      
+/*////////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////////*/    
+    
+
+.footer{
+    background-color: brown;
+    width: 100%;
+    height: 100px;
+
+}
