@@ -503,4 +503,6 @@ img{
 }
 .footer p {
     text-align: start;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
